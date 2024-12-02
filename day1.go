@@ -59,14 +59,8 @@ func gather(data []byte) ([]int, []int) {
 		}
 		nums := strings.Split(line, "   ")
 
-		num1, err := strconv.Atoi(nums[0])
-		if err != nil {
-			log.Fatal("Conversion error", err)
-		}
-		num2, err := strconv.Atoi(nums[1])
-		if err != nil {
-			log.Fatal("Conversion error", err)
-		}
+		num1, _ := strconv.Atoi(nums[0])
+		num2, _ := strconv.Atoi(nums[1])
 
 		list1 = append(list1, num1)
 		list2 = append(list2, num2)
